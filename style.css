@@ -1,0 +1,586 @@
+
+/* Offer Banner Styling */
+
+.offer-banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ecdb84;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1050; 
+}
+
+/* Scrolling Offer Text */
+
+.offer-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: moveLeft 15s linear infinite;
+    color: darkslategrey;
+}
+
+/* Animation: Moves Text From Right to Left */
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Adjust content to avoid overlap with fixed banner */
+
+body {
+    padding-top: 60px;
+}
+
+.logo{
+    color: #ecdb84;
+}
+
+.icons div,.icons a{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: #fff;
+    cursor: pointer;
+    -webkit-text-stroke: .1rem #10221b;
+}
+
+.icons div:hover,.icons a:hover{
+    -webkit-text-stroke: .1rem #45c287;
+}
+
+
+/* Animation for nav items */
+
+.navbar-nav .nav-link {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+
+/* Icons (search, cart, heart) */
+
+.icons .fas {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.icons .fas:hover {
+    color: #ff6347;
+    transform: scale(1.2);
+}
+
+
+/* Logo */
+
+.navbar-brand {
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ff6347;
+}
+
+
+/* Adding some space between navbar items and icons */
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+/* Make sure the navbar is always on top */
+
+.navbar {
+    z-index: 1000;
+}
+
+
+/* Search Icon and Cart Icon Hover Effects */
+
+.fas.fa-search:hover, .fas.fa-shopping-cart:hover, .fas.fa-heart:hover {
+    color: #ff6347;
+    transform: scale(1.2);
+}
+
+
+/* Custom styling for the logo */
+
+.logo-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: black; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    display: flex;
+    align-items: center; 
+}
+
+.logo-link:hover {
+    color: #ff6347; 
+    transform: scale(1.1); 
+}
+
+/* Font Awesome icon styling */
+.logo-link .logo {
+    font-size: 2.5rem; 
+    margin-right: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+/* Icon hover effect */
+.logo-link:hover .logo {
+    transform: rotate(360deg); 
+}
+
+/* Custom CSS for the Products Section */
+.products {
+    width: 100%;
+    height: 140vh;
+    padding: 25px 0;
+}
+
+.products h1 {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    box-shadow: 0 0 8px #ff7e5f;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #f6f6f6;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.small_card {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    margin: 10px 0;
+    transform: translateX(-20px);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.card:hover .small_card {
+    transform: translateX(2px);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.card .image img {
+    width: 150px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.card:hover .image img {
+    transform: scale(1.1);
+}
+
+.small_card i {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 2px 0;
+    line-height: 40px;
+    border: 2px solid #999999;
+    transition: 0.2s;
+}
+
+.small_card i:hover {
+    color: #ff7e5f;
+}
+
+.products_text h2 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.products_text p {
+    color: #91919191;
+    line-height: 21px;
+    margin: 8px 0;
+}
+
+.products_text h3 {
+    margin: 7px 0;
+}
+
+.products_text .products_star {
+    color: orange;
+    margin-bottom: 19px;
+    cursor: pointer;
+}
+
+.btn {
+    font-size: large;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+}
+#home, #reviews, #contact {
+    scroll-margin-top: 135px; 
+}
+#Products{
+    scroll-margin-top: 0px;
+}
+
+.review h1{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.review span{
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    margin: 4rem 0;
+    padding-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.review .box-container .box .image{
+    margin-top: -5rem;
+}
+
+.review .box-container .box .image img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box .content .stars i{
+    color: gold;
+    font-size: 1.7rem;
+    padding: .5rem .1rem 1rem;
+}
+
+.review .box-container .box .content h3{
+    font-size: 2rem;
+    color: #10221b;
+}
+
+.review .box-container .box .content p{
+    font-size: 1.4rem;
+    color: #666;
+    padding: .5rem 1.5rem;
+}
+.contact h1{
+            margin-top: 200px;
+            margin-bottom: 100px;
+            font-size: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .contact span{
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .image{
+    flex: 1 1 30rem;
+}
+
+.contact .row .image img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex: 1 1 42rem;
+    padding: 2rem;
+    margin-right: 50px;
+    border: .1rem solid rgba(0,0,0,0.3);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    border-radius: .5rem;
+}
+
+.contact .row form h3{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: #10221b;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .row form .inputBox input{
+    width: 49%;
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea{
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: #10221b;
+    text-transform: none;
+    margin: .7rem 0;
+}
+
+
+.contact form .inputBox:focus {
+    background: #512a10;
+    color: #fff;
+  }
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+footer{
+    width: 100%;
+}
+
+footer .footer_main{
+    width: 100%;
+    background: #f3f1f1;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer_main .tag{
+    margin: 10px 0;
+}
+
+footer .footer_main .tag .center{
+    text-align: center;
+}
+
+footer .footer_main .tag h1{
+    font-size: 25px;
+    margin: 25px 0;
+    color: #1c0080;
+}
+
+footer .footer_main .tag a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 9px 0;
+}
+
+footer .footer_main .tag a i{
+    padding: 0 10px;
+    transition: 0.3;
+}
+
+footer .footer_main .tag a i:hover{
+    color: #c72092;
+}
+
+footer .footer_main .tag .social_link{
+    display: flex;
+}
+
+footer .footer_main .tag .social_link a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+    position: relative;
+    margin: 0 5px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+footer .footer_main .tag .social_link a .fa-brands{
+    font-size: 15px;
+    line-height: 30px;
+    z-index: 10;
+    position: relative;
+    transition: 0.5s;
+}
+
+footer .footer_main .tag .social_link a:hover i{
+    color: white;
+}
+
+footer .footer_main .tag .social_link a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -90px;
+    background: linear-gradient(-45deg, #ff7e5f, #feb47b);
+    position: absolute;
+    z-index: -10;
+    transition: 0.5s;
+}
+
+footer .footer_main .tag .social_link a:hover::after{
+    left: 0;
+}
+
+
+html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: #f1f1f1; ;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+/* Responsive Styles */
+
+/* Ensure navbar collapses properly */
+.navbar-nav {
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 15px;
+    }
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* Adjust home section for smaller screens */
+@media (max-width: 768px) {
+    #shoe-banner {
+        text-align: center;
+        background-size: contain;
+        height: 80vh;
+    }
+    .shoe-banner-content {
+        padding: 20px;
+    }
+}
+
+/* Make product section responsive */
+@media (max-width: 768px) {
+    .products .row {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .products_text h2 {
+        font-size: 24px;
+    }
+    .products_text p {
+        font-size: 14px;
+    }
+}
+
+/* Adjust review section */
+@media (max-width: 768px) {
+    .review .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Footer and Contact form adjustments */
+@media (max-width: 768px) {
+    .contact .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact .row .image img {
+        width: 100%;
+        height: auto;
+    }
+    .contact .row form {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer_main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer_main .tag {
+        margin-bottom: 20px;
+    }
+}
